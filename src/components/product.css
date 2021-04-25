@@ -4,12 +4,10 @@
     height: 450px;
     border: 1px solid black;
     border-radius: 5px;
-
     padding: 10px;
     margin: 20px;
     box-shadow: 
 }
-
 .product-container p{
     display: inline-block;
     background-color: chocolate;
