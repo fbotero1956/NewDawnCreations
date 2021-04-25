@@ -31,4 +31,6 @@ class Product extends Component {
 }
 
 export default Product;
+
+
 // <img src="https://picsum.photos/id/237/180/300" alt="product"/>
