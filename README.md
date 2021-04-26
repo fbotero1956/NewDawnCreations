@@ -1,3 +1,5 @@
+This React application is intended to serve as the online catalog for NewDawnCreations, a specialty wood and resin shop in Flemington NJ
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
