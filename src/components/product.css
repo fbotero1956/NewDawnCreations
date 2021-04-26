@@ -12,6 +12,7 @@
     display: inline-block;
     background-color: chocolate;
     padding: 10px;
+    font-size: 15px;
 }
 .product-container img{
     margin: 10px;
@@ -29,4 +30,10 @@
 }
 .qp-button {
     margin-left: 15px;
+}
+img{
+    width: 180px;
+}
+.title{
+    font-size: 15px;
 }

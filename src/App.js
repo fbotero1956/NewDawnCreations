@@ -5,29 +5,17 @@ import Footer from './components/footer';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.css";
-import Product from './components/product';
+
+import Catalog from './components/catalog';
 
 
 function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <h1>NewDawnCreations Catalog</h1>
-      <div className="product-area">
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
+      <Catalog></Catalog>
       <Footer></Footer>
-      </div>
+      
     </div>
   );
 }

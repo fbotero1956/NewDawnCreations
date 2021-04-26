@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./product.css";
 import QuantityPicker from "./quantityPicker";
+var quantity = 1;
 
 class Product extends Component {
   state = {
@@ -12,14 +13,14 @@ class Product extends Component {
   render() {
     return (
       <div className="product-container">
-        <img src="https://picsum.photos/id/237/180/300" alt="product"/>
-        <h5>{this.state.title}</h5>
-        <p>Price $ {this.state.price}  </p>
-        <p>Total $ {this.state.total} </p>
+        <img src={"/images/products/" + this.props.data.image} alt="product"/>
+        <h5 className="title">{this.props.data.title}</h5>
+        <p>Price $ {this.props.data.price}  </p>
+        <p>Total $ {this.props.data.price * quantity} </p>
         <div className="qp-button">
-            <QuantityPicker></QuantityPicker>
+            <QuantityPicker props={quantity}></QuantityPicker>
             <button className="btn btn-sm btn-info" onClick={this.addToCart}>
-            <i class="fa fa-cart-plus" aria-hidden="true"></i> Add
+            <i className="fa fa-cart-plus" aria-hidden="true"></i> Add
         </button>
         </div>
       </div>

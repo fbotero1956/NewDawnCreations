@@ -24,7 +24,7 @@ class NavBar extends Component {
         <a className="nav-link" href="/#">Contact us</a>
       </li>
       <li className="nav-item active">
-        <a className="nav-link disabled" href="/#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a className="nav-link disabled" href="/#" tabIndex="-1" aria-disabled="true">Disabled</a>
       </li>
     </ul>
   </div>
