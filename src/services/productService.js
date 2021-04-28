@@ -16,7 +16,7 @@ var data = [
       title: "Resin Garden Tile",
       image: "item2img1.png",
       discount: 10,
-      category: "Rsin Tiles",
+      category: "Resin Tiles",
     },
     {
       id: "5f40a6baa9e6e22fa1d5fac4",
@@ -25,7 +25,7 @@ var data = [
       title: "Essential Oil Base",
       image: "item3img1.png",
       discount: 0,
-      category: "Vegetable",
+      category: "Oil Holders",
     },
     {
       id: "5f40a6baf0f068a497921d29",
@@ -34,7 +34,7 @@ var data = [
       title: "Essential Oil Holder",
       image: "item4img1.png",
       discount: 0,
-      category: "Vegetable",
+      category: "Oil Holders",
     },
     {
       id: "5f40a866337a3bb00793da52",
@@ -43,7 +43,7 @@ var data = [
       title: "Tidal Wave Serving Tray",
       image: "item5img1.png",
       discount: 4,
-      category: "Fruit",
+      category: "Serving Trays",
     },
     {
       id: "5f40a866ea0a04e6891b7084",
@@ -52,7 +52,7 @@ var data = [
       title: "Square Oil Holders",
       image: "item6img1.png",
       discount: 0,
-      category: "Fruit",
+      category: "Oil Holders",
     },
     {
       id: "5f40a866ea0a04e6891212333",
@@ -62,7 +62,7 @@ var data = [
       image: "item1img2.png",
       discount: 12,
       minimum: 6,
-      category: "Dairy & Eggs",
+      category: "Serving Trays",
     },
     {
       id: "5f40a866ea0a04e68911231328",
@@ -71,7 +71,7 @@ var data = [
       title: "Resing Serving Trays",
       image: "item1img3.png",
       discount: 12,
-      category: "Beverages",
+      category: "Serving Trays",
     },
   ];
 

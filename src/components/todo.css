@@ -1,3 +1,6 @@
-.todo-div{
-    background-color: aqua;
+.todo-div h5{
+    color: black;
+}
+.btn{
+    margin-bottom: 5px;
 }

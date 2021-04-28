@@ -14,12 +14,12 @@ class ToDo extends Component {
     return (
       <div>
         <div className="todo-div">
-                <h5 className="title">To Do List</h5>
+                <h5>Add items to the To Do List</h5>
                 <input 
-                value = {this.state.toDoText} 
+                value = {this.state.todoText} 
                 className="input" 
                 type="text" 
-                placeholder="enter todo here" 
+                placeholder="enter to do item here" 
                 onChange={this.onTextChange}>
                 </input>
                 <button className="btn btn-sm btn-info" onClick={this.addToDo}>
@@ -43,7 +43,7 @@ class ToDo extends Component {
     var tdArray = this.state.todoArray;
     console.log(tdArray);
     tdArray.push(this.state.todoText);
-    this.setState({todoArray: tdArray, todoText: ""});
+    this.setState({todoArray: tdArray, todoText: ''});
 };
 }
 
