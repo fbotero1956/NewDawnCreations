@@ -12,7 +12,7 @@ class ToDo extends Component {
 
   render() {
     return (
-      <div>
+      <div className="todo-container">
         <div className="todo-div">
                 <h5>Add items to the To Do List</h5>
                 <input 
@@ -22,7 +22,7 @@ class ToDo extends Component {
                 placeholder="enter to do item here" 
                 onChange={this.onTextChange}>
                 </input>
-                <button className="btn btn-sm btn-info" onClick={this.addToDo}>
+                <button className="btn btn-sm btn-info btn-todo" onClick={this.addToDo}>
                     Add To Do
                 </button>
             </div>
