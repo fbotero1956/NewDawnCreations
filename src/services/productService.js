@@ -2,12 +2,12 @@
 var data = [
     {
       id: "5f40a6baac77a903d8f682c6",
-      price: 25.00,
+      price: 25.25,
       stock: 13,
       title: "Bamboo Serving Trays",
       image: "item1img1.png",
       discount: 5,
-      category: "Vegetable",
+      category: "Serving Trays",
     },
     {
       id: "5f40a6ba41d9e5044ced586c",
@@ -16,7 +16,7 @@ var data = [
       title: "Resin Garden Tile",
       image: "item2img1.png",
       discount: 10,
-      category: "Fruit",
+      category: "Rsin Tiles",
     },
     {
       id: "5f40a6baa9e6e22fa1d5fac4",

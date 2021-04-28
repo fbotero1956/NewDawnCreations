@@ -5,7 +5,7 @@ import "font-awesome/css/font-awesome.css";
 import Product from './product';
 import ProductService from "../services/productService";
 
-class Catalog extends Component {catalog: []
+class Catalog extends Component {
   state = {
     catalog: [],
   };
@@ -28,6 +28,11 @@ class Catalog extends Component {catalog: []
         var service = new ProductService();
         var catalog = service.getCatalog();
         this.setState({ catalog: catalog});
+
+        //get the unique categories
+        var categories =  [];
+        // for loop to see if the category already exists
+        //if not add it 
     }
 }
 export default Catalog;
