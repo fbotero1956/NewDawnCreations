@@ -1,12 +1,12 @@
 .product-container{
     display: inline-block;
     width: 220px;
-    height: 450px;
+    height: 400px;
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
     margin: 20px;
-    box-shadow: 
+    background-color: azure;
 }
 .product-container p{
     display: inline-block;
@@ -16,7 +16,12 @@
 }
 .product-container img{
     margin: 10px;
-    height: 275px;
+    height: 225px;
+    width: 180px;
+}
+.product-container h5{
+   color: black;
+   font-weight: 700;
 }
 .product-container div.button{
 
@@ -30,9 +35,6 @@
 }
 .qp-button {
     margin-left: 15px;
-}
-img{
-    width: 180px;
 }
 .title{
     font-size: 15px;
