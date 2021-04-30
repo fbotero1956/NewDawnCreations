@@ -5,6 +5,15 @@
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,0.4066001400560224) 0%, rgba(148,187,233,0.10127801120448177) 100%);
 }
+@media (max-width:500px){
+    .todo-container{
+        border: 2px solid black;
+        margin-left: 140px;
+        margin-right: 140px;
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,0.4066001400560224) 0%, rgba(148,187,233,0.10127801120448177) 100%);
+    }
+}
 .todo-div h5{
     color: black;
 }

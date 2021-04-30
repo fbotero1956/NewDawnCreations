@@ -14,7 +14,8 @@ class ToDo extends Component {
     return (
       <div className="todo-container">
         <div className="todo-div">
-                <h5>Add items to the To Do List</h5>
+                <h5>To Do List</h5>
+                <h6>Add items</h6>
                 <input 
                 value = {this.state.todoText} 
                 className="input" 
@@ -23,11 +24,11 @@ class ToDo extends Component {
                 onChange={this.onTextChange}>
                 </input>
                 <button className="btn btn-sm btn-info btn-todo" onClick={this.addToDo}>
-                    Add To Do
+                    Add Item
                 </button>
             </div>
             <div>
-                <h5>Pending items</h5>
+                <h6>Pending items</h6>
                 <p>you have {this.state.todoArray.length} pending tasks</p>
                 {this.state.todoArray.map( item =>  
                 <PendingToDos key={item.id} data = {item}></PendingToDos>)}

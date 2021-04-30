@@ -80,6 +80,18 @@ class ProductService {
         // connect to server and retrieve the catalog of products
         return data;
     }
+    getCategories(){
+      // connect to server and retrieve the catalog of products
+      var categories= [];
+      for (var i=0; i < data.length; i++){
+        categories.push(data[i].category);
+      }
+      var set = new Set(categories);
+      console.log(set);
+      categories = Array.from(set);
+      categories.push("See All");
+      return categories;
+  }
     getProductPrice(id) {
         return 99.99;
     }

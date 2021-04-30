@@ -8,15 +8,30 @@ import ProductService from "../services/productService";
 class Catalog extends Component {
   state = {
     catalog: [],
+    categories: [],
+    selectedCat: ""
   };
-
+  handleClick = (cat) => {      
+      if(cat === "See All") 
+      {this.setState({selectedCat:  ""})}
+      else 
+      {this.setState({selectedCat: cat});};
+    };
   render() {
+      let itemsToDisplay = this.state.catalog;
+      if (this.state.selectedCat !== "") {
+        itemsToDisplay = itemsToDisplay.filter(n => n.category === this.state.selectedCat)};   
     return (
         <div>
             <div className="product-area">
                 <h1>NewDawnCreations Catalog</h1>
                <div>there are: {this.state.catalog.length} products in the catalog</div>
-                {this.state.catalog.map( item =>  
+               <div>
+                {this.state.categories.map( (cat, index) =>
+                    <button className="btn btn-sm btn-info btn-cat" key={index}
+                    onClick={() => {this.handleClick(cat) }} value={cat}>{cat}</button>)}
+                </div>
+                  { itemsToDisplay.map(item =>  
                 <Product key={item.id} data = {item}></Product>)}
             </div>
         </div>
@@ -30,7 +45,9 @@ class Catalog extends Component {
         this.setState({ catalog: catalog});
 
         //get the unique categories
-        var categories =  [];
+        var categories =  service.getCategories();
+        this.setState({categories: categories});
+        console.log('from catalog ' + categories);
         // for loop to see if the category already exists
         //if not add it 
     }
