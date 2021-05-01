@@ -32,7 +32,6 @@ class Product extends Component {
     return total.toFixed(2);
   }
   calcTotal = (newQuantity) => {
-    console.log('value changed to:' + newQuantity);
     this.setState({quantity: newQuantity})
   }
   addToCart = () => {

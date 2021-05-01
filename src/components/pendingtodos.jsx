@@ -8,12 +8,16 @@ class PendingToDos extends Component {
     quantity: 1
   };
 
-  render() {
+  render(props) {
     return (
-      <div className="pendingTodos">   
-        <p className="title">{this.props.data}</p>
+      <div className="pendingTodos" key={this.props.index}>   
+        <p className="title todo-task" >{this.props.data}</p>
+        <button className="todo-btn" onClick= {this.deleteToDo}>Delete</button>
       </div>
     );
+  }
+  deleteToDo = () => {
+    this.props.deleteToDo(this.props.index)
   }
 
 }

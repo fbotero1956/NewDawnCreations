@@ -4,6 +4,7 @@
     margin-left: 100px;
     margin-bottom: 15px;
 
+
 }
 .title{
     color:white;
@@ -14,6 +15,15 @@
         width: 200px;
         margin-left: 7px;
         margin-bottom: 15px;
+
     
     }
+}
+.todo-task {
+    display:inline-block;
+    margin-right:5px;
+}
+.todo-btn {
+    display:inline-block;
+    margin-right:0;
 }

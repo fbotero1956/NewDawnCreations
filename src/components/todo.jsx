@@ -7,7 +7,7 @@ class ToDo extends Component {
   state = {
     todoText: '',
     todoArray: []
-  };
+    };
 
 
   render() {
@@ -30,8 +30,9 @@ class ToDo extends Component {
             <div>
                 <h6>Pending items</h6>
                 <p>you have {this.state.todoArray.length} pending tasks</p>
-                {this.state.todoArray.map( item =>  
-                <PendingToDos key={item.id} data = {item}></PendingToDos>)}
+                {this.state.todoArray.map( (item, index) =>  
+                <PendingToDos key={index} data = {item} index={index} 
+                deleteToDo ={this.deleteToDo}></PendingToDos>)}
             </div>
         </div>
     );
@@ -45,7 +46,12 @@ class ToDo extends Component {
     console.log(tdArray);
     tdArray.push(this.state.todoText);
     this.setState({todoArray: tdArray, todoText: ''});
-};
+  };
+  deleteToDo = (index) => {
+    var tdArray = this.state.todoArray;
+    tdArray.splice(index, 1);
+    this.setState({todoArray: tdArray});
+  };
 }
 
 export default ToDo;
