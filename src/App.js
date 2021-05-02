@@ -11,6 +11,7 @@ import Catalog from './components/catalog';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import HomePage from './components/homepage';
 import About from './components/about';
+import AtWork from './components/atwork';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/catalog" exact component={Catalog}></Route>
           <Route path="/todo" exact component={ToDo}></Route>
           <Route path="/about" exact component={About}></Route>
+          <Route path="/atwork" exact component={AtWork}></Route>
         </Switch>
         <Footer></Footer>
       </div>

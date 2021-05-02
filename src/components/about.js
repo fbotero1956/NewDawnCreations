@@ -24,7 +24,8 @@ render() {
     return (
     <div className="about-container">
         <h1>About me</h1>
-        <h6>Please send us an email with any questions that you might have</h6>
+        <img className="about-img" src="/images/products/artist1.jpg" alt="product"/>
+        <h6>Please send me an email with any questions that you might have</h6>
         <p>{this.state.eMail}</p>
         <button className="btn btn-lg btn-info btn-eMail" onClick={this.geteMail}>{showeMailBtn}</button>
     </div>

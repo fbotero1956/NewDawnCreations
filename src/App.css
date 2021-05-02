@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,14 +17,47 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .product-area{
   background-color: rgb(197, 238, 240) !important;
+}
+.about-container{
+  background-color: rgb(197, 238, 240) !important;
+}
+.welcome-area{
+  background-color: rgb(197, 238, 240) !important;
+}
+.welcome-img{
+  width:35vw;
+  height:80vh;
+  margin-bottom: 15px;
+}
+.about-img{
+  width:25vw;
+  height:60vh;
+  margin-bottom: 15px;
+
+}
+.navbar{
+
+background: rgb(231,91,152);
+background: radial-gradient(circle, rgba(231,91,152,0.4066001400560224) 0%, rgba(236,240,244,0.196516106442577) 100%);
+}
+@media (max-width:500px){
+  .todo-container{
+      border: 2px solid black;
+      margin-left: 140px;
+      margin-right: 140px;
+      background: rgb(238,174,202);
+      background: radial-gradient(circle, rgba(238,174,202,0.4066001400560224) 0%, rgba(148,187,233,0.10127801120448177) 100%);
+  }
+  .welcome-img{
+    width:60vw;
+    height:50vh;
+    margin-bottom: 15px;
+  }
+  .about-img{
+    width:60vw;
+    height:50vh;
+    margin-bottom: 15px;
+  }
 }

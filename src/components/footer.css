@@ -1,3 +1,7 @@
 .footer-bar {
-    background:aqua;
+
+    background: rgb(231,91,152);
+    background: radial-gradient(circle, rgba(231,91,152,0.4066001400560224) 0%, rgba(31,113,195,0.9248074229691877) 100%);
+    color: white;
+    font-weight: 700;
 }

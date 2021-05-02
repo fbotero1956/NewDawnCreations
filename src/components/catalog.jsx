@@ -25,7 +25,7 @@ class Catalog extends Component {
         <div>
             <div className="product-area">
                 <h1>NewDawnCreations Catalog</h1>
-               <div>there are: {this.state.catalog.length} products in the catalog</div>
+               <div>currently there are {this.state.catalog.length} products in the catalog</div> 
                <div>
                 {this.state.categories.map( (cat, index) =>
                     <button className="btn btn-sm btn-info btn-cat" key={index}
