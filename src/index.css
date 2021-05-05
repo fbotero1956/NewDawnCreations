@@ -20,3 +20,14 @@ code {
 .btn-eMail{
   margin:15px;
 }
+.cart-area{
+  display:flex;
+  flex-direction: row;
+  margin-left: 10px;
+  background-color: blue;
+  color: white;
+}
+.my-2 span{
+  margin-left: 10px
+}
+

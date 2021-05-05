@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./product.css";
 import QuantityPicker from "./quantityPicker";
+import {connect} from 'react-redux';
+import {addToCart} from '../store/actions';
 
 
 class Product extends Component {
@@ -36,10 +38,14 @@ class Product extends Component {
   }
   addToCart = () => {
     // add to cart logic
+    var item = {...this.props.data};
+    item.quantity = this.state.quantity;
+    console.log(item);
+    this.props.addToCart(item);
   };
 }
 
-export default Product;
+export default connect(null,{addToCart})(Product);
 
 
 // <img src="https://picsum.photos/id/237/180/300" alt="product"/>

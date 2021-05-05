@@ -12,12 +12,12 @@ class PendingToDos extends Component {
     return (
       <div className="pendingTodos" key={this.props.index}>   
         <p className="title todo-task" >{this.props.data}</p>
-        <button className="todo-btn" onClick= {this.deleteToDo}><i class="fa fa-trash"></i></button>
+        <button className="todo-btn" onClick= {this.deleteToDo}><i className="fa fa-trash"></i></button>
       </div>
     );
   }
   deleteToDo = () => {
-    this.props.deleteToDo(this.props.index)
+    this.props.deleteToDo(this.props.data);
   }
 
 }

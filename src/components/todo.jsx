@@ -1,15 +1,26 @@
 import React, { Component } from "react";
 import "./todo.css";
 import PendingToDos from './pendingtodos';
+import {connect} from 'react-redux';
+import {addTodo, removeTodo} from '../store/actions';
 
 
 class ToDo extends Component {
   state = {
-    todoText: '',
-    todoArray: []
+    todoText: ''
     };
+  constructor() {
+    super();
 
+    this.input = React.createRef();
+  }
 
+  componentDidMount() {
+    this.input.current.focus();
+  }
+  componentDidUpdate() {
+    this.input.current.focus();
+  }
   render() {
     return (
       <div className="todo-container">
@@ -17,6 +28,7 @@ class ToDo extends Component {
                 <h5>To Do List</h5>
                 <h6>Add items</h6>
                 <input 
+                ref={this.input}
                 value = {this.state.todoText} 
                 className="input" 
                 type="text" 
@@ -29,8 +41,8 @@ class ToDo extends Component {
             </div>
             <div>
                 <h6>Pending items</h6>
-                <p>you have {this.state.todoArray.length} pending tasks</p>
-                {this.state.todoArray.map( (item, index) =>  
+                <p>you have {this.props.todoItems.length} pending tasks</p>
+                {this.props.todoItems.map( (item, index) =>  
                 <PendingToDos key={index} data = {item} index={index} 
                 deleteToDo ={this.deleteToDo}></PendingToDos>)}
             </div>
@@ -42,16 +54,18 @@ class ToDo extends Component {
       this.setState({todoText: event.target.value});
   };
   addToDo = () => {
-    var tdArray = this.state.todoArray;
-    console.log(tdArray);
-    tdArray.push(this.state.todoText);
-    this.setState({todoArray: tdArray, todoText: ''});
+    //dispatch the action
+    this.props.addTodo(this.state.todoText);
+    this.setState({todoText: ''});
   };
-  deleteToDo = (index) => {
-    var tdArray = this.state.todoArray;
-    tdArray.splice(index, 1);
-    this.setState({todoArray: tdArray});
+  deleteToDo = (item) => {
+   this.props.removeTodo(item);
   };
 }
+const mapStateToProps = (state) => {
+  return{
+    todoItems: state.todo
+  };
+};
 
-export default ToDo;
+export default connect(mapStateToProps,{addTodo, removeTodo})(ToDo);

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
+import {connect} from 'react-redux';
+
 
 class NavBar extends Component {
 
@@ -28,10 +30,24 @@ class NavBar extends Component {
         </li>
       </ul>
     </div>
-  </div>
+    <div className="form-inline my-2 my-lg-0">
+            <Link className="btn btn-outline-info my-2 my-sm-0" to="/cart">
+              <i className="fa fa-shopping-cart" aria-hidden="true"  ></i>
+               View Cart
+              <span className="badge badge-primary cart-badge">
+              {this.props.cart.length}
+              </span>
+            </Link>
+          </div>
+    </div>
 </nav>
           );
     }
   }
- 
-export default NavBar;
+  const mapStateToProps = (state) => {
+    return{
+      cart: state.cart
+    };
+  };
+  
+  export default connect(mapStateToProps,null)(NavBar);

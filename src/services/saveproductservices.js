@@ -1,6 +1,4 @@
-//import to use axios library for http get/post requests
-//import axios from "axios";
-
+import axious from "axios";
 
 var data = [
     {
@@ -79,29 +77,17 @@ var data = [
   ];
 
 class ProductService {
-  serverUrl = 'http://fsdi.azurewebsites.net/api';
-
-    async getCatalog(){
+    getCatalog(){
         // connect to server and retrieve the catalog of products
         // js fetch
         //jquery $.ajax
         // the best approach axios
-        // if server is not working uncomment the next line and comment the axios part
+
         return data;
-        //axios code
-      //var res = await axios.get(this.serverUrl + "/products");
-      //return res.data;
     }
-    async getCategories(){
+    getCategories(){
       // connect to server and retrieve the catalog of products
-      //use the data array for the local data
-      
       var categories= [];
-     //axios code
-     //var cat = await this.getCatalog();
-     //for (var i=0; i < cat.length; i++){
-     //  categories.push(cat[i].category);
-     // }
       for (var i=0; i < data.length; i++){
         categories.push(data[i].category);
       }
