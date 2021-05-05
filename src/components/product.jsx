@@ -40,12 +40,9 @@ class Product extends Component {
     // add to cart logic
     var item = {...this.props.data};
     item.quantity = this.state.quantity;
-    console.log(item);
+
     this.props.addToCart(item);
   };
 }
 
 export default connect(null,{addToCart})(Product);
-
-
-// <img src="https://picsum.photos/id/237/180/300" alt="product"/>

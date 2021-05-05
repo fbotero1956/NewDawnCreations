@@ -12,7 +12,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import HomePage from './components/homepage';
 import About from './components/about';
 import AtWork from './components/atwork';
-
+import Cart from './components/cart';
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
           <Route path="/todo" exact component={ToDo}></Route>
           <Route path="/about" exact component={About}></Route>
           <Route path="/atwork" exact component={AtWork}></Route>
+          <Route path="/cart" exact component={Cart}></Route>
         </Switch>
         <Footer></Footer>
       </div>

@@ -106,7 +106,7 @@ class ProductService {
         categories.push(data[i].category);
       }
       var set = new Set(categories);
-      console.log(set);
+
       categories = Array.from(set);
       categories.push("See All");
       return categories;

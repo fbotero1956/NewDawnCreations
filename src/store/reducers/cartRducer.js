@@ -11,18 +11,14 @@
     switch (action.type) {
         case "ADD_TO_CART":
             //if the product exists inside the cart, just increase the quantity
-            console.log("payload" + action.payload.title);
-            console.log(" title" + copy.length);
             var found = false;
             if (copy.length !== 0){
-                console.log(" title" + copy.length);
+
                 for (var i=0; i < copy.length; i++){
-                    console.log(" title" + copy[i].title);
-                    console.log(" title" + action.payload.title);
+
                     if (copy[i].title === action.payload.title){
                         copy[i].quantity += action.payload.quantity;
                         found = true;
-                        console.log(" found a match at" + i );
                         break;
                     };
                 };
@@ -31,7 +27,12 @@
                         copy.push(action.payload);
             };
             break;
-            default:
+        case "REMOVE_FROM_CART":
+
+            copy = copy.filter((t) => t !== action.payload);
+            return copy;
+            
+        default:
                 return state;
             };
             return copy;

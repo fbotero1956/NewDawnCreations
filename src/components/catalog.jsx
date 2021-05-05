@@ -47,7 +47,7 @@ class Catalog extends Component {
         //get the unique categories
         var categories = await service.getCategories();
         this.setState({categories: categories});
-        console.log('from catalog ' + categories);
+
         // for loop to see if the category already exists
         //if not add it 
     }

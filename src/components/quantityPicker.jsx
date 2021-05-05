@@ -23,7 +23,7 @@ class QuantityPicker extends Component {
   increase = () => {
     var newQuantity = this.state.quantity + 1;
     this.setState({ quantity: newQuantity });
-    console.log("add 1 to quantity");
+
     this.props.onValueChange(newQuantity);
     this.setState({value: false});
   };
