@@ -19,6 +19,7 @@ function App() {
     <BrowserRouter>
 
       <div className="App">
+        
         <NavBar></NavBar>
         <Switch>
           <Route path="/" exact component={HomePage}></Route>
@@ -28,6 +29,7 @@ function App() {
           <Route path="/atwork" exact component={AtWork}></Route>
           <Route path="/cart" exact component={Cart}></Route>
         </Switch>
+        
         <Footer></Footer>
       </div>
 

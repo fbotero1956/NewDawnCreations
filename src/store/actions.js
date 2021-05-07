@@ -7,18 +7,18 @@
 export const addTodo = (todoText) => {
     return {
         type: "ADD_TODO",
-        payload: todoText
+        payload: todoText,
     };
 };
 export const removeTodo = (todoText) => {
     return {
         type: "REMOVE_TODO",
-        payload: todoText
+        payload: todoText,
     };
 };
 export const clearTodos = () => {
     return {
-        type: "CLEAR_TODOS"
+        type: "CLEAR_TODOS",
     };
 };
 export const addToCart = (item) => {

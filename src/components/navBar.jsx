@@ -10,29 +10,21 @@ class NavBar extends Component {
         return (
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
-    <Link className="navbar-brand" to="#">NewDawnCreations</Link>
-    <div  id="navbarNav">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link className="nav-link" aria-current="page" to="/">Home</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/catalog">Catalog</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/about">Artist</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/atwork">At Work</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/cart">Cart</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/todo">To Do List</Link>
-        </li>
-      </ul>
+    <Link className="navbar-brand" to="/">NewDawnCreations</Link>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="navbar-nav">
+        <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+        <Link className="nav-link" to="/catalog">Catalog</Link>
+        <Link className="nav-link" to="/about">Artist</Link>
+        <Link className="nav-link" to="/atwork">AtWork</Link>
+        <Link className="nav-link" to="/cart">Cart</Link>
+        <Link className="nav-link" to="/todo">To Do List</Link>
+      </div>
     </div>
+
     <div className="form-inline my-2 my-lg-0">
             <Link className="btn btn-outline-info my-2 my-sm-0" to="/cart">
               <i className="fa fa-shopping-cart" aria-hidden="true"  ></i>
@@ -41,7 +33,7 @@ class NavBar extends Component {
               {this.props.cart.length}
               </span>
             </Link>
-          </div>
+      </div>
     </div>
 </nav>
           );

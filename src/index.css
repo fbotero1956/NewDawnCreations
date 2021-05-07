@@ -30,7 +30,12 @@ code {
 .my-2 span{
   margin-left: 10px
 }
-.cart-view{
-
+.del-btn-view{
+  width:50px !important;
+  border: 1 solid white !important;
+  background-color: white;
+}
+.del-btn{
+  size: 20;
 }
 

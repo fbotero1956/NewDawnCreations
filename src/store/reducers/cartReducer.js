@@ -12,7 +12,6 @@
         case "ADD_TO_CART":
             //if the product exists inside the cart, just increase the quantity
             var found = false;
-            if (copy.length !== 0){
 
                 for (var i=0; i < copy.length; i++){
 
@@ -22,8 +21,8 @@
                         break;
                     };
                 };
-            };
-            if (!found || copy.length === 0) {
+
+                if (!found) {
                         copy.push(action.payload);
             };
             break;
@@ -31,9 +30,9 @@
 
             copy = copy.filter((t) => t !== action.payload);
             return copy;
-            
+
         default:
-                return state;
+            return state;
             };
             return copy;
     };
